@@ -1,56 +1,52 @@
 <script lang="ts">
 	import { COLS, ROWS } from "../../utils";
-
 	import { Tile } from "../board";
 	export let visible: boolean;
 </script>
 
-<h3>how to play</h3>
-<div>Guess the <strong>WORDLE</strong> in {ROWS} tries.</div>
-<div>Each guess must be a valid {COLS} letter word. Hit the enter button to submit.</div>
+<h3>как играть</h3>
+<div>Угадайте <strong>СЛОВО</strong> за {ROWS} попыток.</div>
+<div>Каждая попытка должна быть существующим словом из {COLS} букв. Нажмите Enter для отправки.</div>
 <div>
-	After each guess, the color of the tiles will change to show how close your guess was to the
-	word.
+	После каждой попытки цвет плиток будет меняться, чтобы показать, насколько близко ваша догадка была к слову.
 </div>
 <div class:complete={visible} class="examples">
-	<div><strong>Examples</strong></div>
+	<div><strong>Примеры</strong></div>
 	<div class="row">
-		<Tile value="w" state="🟩" />
-		<Tile value="e" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="r" state="🔳" />
-		<Tile value="y" state="🔳" />
+		<Tile value="м" state="🟩" />
+		<Tile value="а" state="🔳" />
+		<Tile value="м" state="🔳" />
+		<Tile value="а" state="🔳" />
+		<Tile value="н" state="🔳" />
 	</div>
-	<div>The letter <strong>W</strong> is in the word and in the correct spot.</div>
+	<div>Буква <strong>М</strong> есть в слове и находится в правильном месте.</div>
 	<div class="row">
-		<Tile value="p" state="🔳" />
-		<Tile value="i" state="🟨" />
-		<Tile value="l" state="🔳" />
-		<Tile value="l" state="🔳" />
-		<Tile value="s" state="🔳" />
+		<Tile value="п" state="🔳" />
+		<Tile value="а" state="🟨" />
+		<Tile value="п" state="🔳" />
+		<Tile value="а" state="🔳" />
+		<Tile value="н" state="🔳" />
 	</div>
-	<div>The letter <strong>I</strong> is in the word but in the wrong spot.</div>
+	<div>Буква <strong>А</strong> есть в слове, но в другом месте.</div>
 	<div class="row">
-		<Tile value="v" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="g" state="🔳" />
-		<Tile value="u" state="⬛" />
-		<Tile value="e" state="🔳" />
+		<Tile value="в" state="🔳" />
+		<Tile value="о" state="🔳" />
+		<Tile value="д" state="🔳" />
+		<Tile value="а" state="⬛" />
+		<Tile value="н" state="🔳" />
 	</div>
-	<div>The letter <strong>U</strong> is not in the word in any spot.</div>
+	<div>Буквы <strong>А</strong> нет в слове.</div>
 </div>
 <div>
-	This is a recreation of the original <a
+	Это русская версия оригинального <a
 		href="https://www.nytimes.com/games/wordle/"
 		target="_blank"
 		rel="noreferrer">Wordle</a
-	>
-	by Josh Wardle with additional modes and features, allowing you to play infinite wordles. Switch
-	to infinite mode to play an unlimited number of times.
+	> от Josh Wardle с дополнительными режимами и функциями, позволяющими играть бесконечно. Переключитесь в бесконечный режим, чтобы играть неограниченное количество раз.
 	<br /><br />
-	Open the settings menu to see some of the additional features.
+	Откройте меню настроек, чтобы увидеть дополнительные функции.
 	<br />
-	Written with Svelte, in Typescript by
+	Написано на Svelte на TypeScript от
 	<a href="https://github.com/MikhaD" target="_blank" rel="noreferrer">MikhaD</a>.
 </div>
 
